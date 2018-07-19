@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @product.name %>
 </p>
 
 <p>
-  <strong>Desc:</strong>
+  <strong>Descripción:</strong>
   <%= @product.desc %>
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @product.category %>
+  <strong>Categoria:</strong>
+  <%= @product.category.try(:name) %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
